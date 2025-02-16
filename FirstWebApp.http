@@ -1,0 +1,6 @@
+@FirstWebApp_HostAddress = http://localhost:5108
+
+GET {{FirstWebApp_HostAddress}}/todolist/
+Accept: application/json
+
+###
