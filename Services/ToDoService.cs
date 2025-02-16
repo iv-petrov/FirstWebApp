@@ -3,11 +3,13 @@
     public class ToDoService : IToDoService
     {
         private List<ToDoItem> _items;
+        private string ToDoId { get; set; }
         /// <summary>
         /// Контспуктор создаёт тестовый набор
         /// </summary>
         public ToDoService()
         {
+            ToDoId = Guid.NewGuid().ToString();
             _items = new List<ToDoItem>();
             _items.Add(new ToDoItem(1, "Задача №1", false));
             _items.Add(new ToDoItem(2, "Задача №2", false));
@@ -73,6 +75,10 @@
             int i = _items.FindIndex(item => item.Id == inId);
             if (i >= 0) _items.RemoveAt(i);
             return i;
+        }
+        public string GetTitle()
+        {
+            return this.ToDoId;
         }
     }
 }

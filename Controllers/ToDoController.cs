@@ -18,7 +18,7 @@ namespace FirstWebApp.Controllers
         [HttpGet(Name = "GetList")]
         public IEnumerable<ToDoItem> GetList()
         {
-            _logger.Log("Запрос списка задач.");
+            _logger.Log($"Запрос списка задач. ({_service.GetTitle()})");
             return _service.GetList();
         }
         [HttpGet("{id}",Name = "GetItem")]

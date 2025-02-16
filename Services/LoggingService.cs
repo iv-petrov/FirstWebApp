@@ -5,7 +5,8 @@
         private readonly ILogger _logger;
         public LoggingService()
         {
-            _logger = LoggerFactory.Create(builder => builder.AddConsole()).CreateLogger("ToDo");
+            string id = Guid.NewGuid().ToString();
+            _logger = LoggerFactory.Create(builder => builder.AddConsole()).CreateLogger($"ToDo {id}");
         }
         public void Log(string message)
         {

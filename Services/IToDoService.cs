@@ -7,5 +7,6 @@
         public ToDoItem SetItem(ToDoItem item);
         public int AppendItem(ToDoItem item);
         public int DeleteItem(int id);
+        public string GetTitle();
     }
 }

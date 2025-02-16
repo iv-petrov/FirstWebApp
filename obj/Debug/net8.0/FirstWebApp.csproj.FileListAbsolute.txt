@@ -31,3 +31,4 @@ C:\Users\IgVaPetrov\source\cources\FirstWebApp\obj\Debug\net8.0\FirstWebApp.pdb
 C:\Users\IgVaPetrov\source\cources\FirstWebApp\obj\Debug\net8.0\FirstWebApp.genruntimeconfig.cache
 C:\Users\IgVaPetrov\source\cources\FirstWebApp\obj\Debug\net8.0\ref\FirstWebApp.dll
 C:\Users\IgVaPetrov\source\cources\FirstWebApp\bin\Debug\net8.0\libman.json
+C:\Users\IgVaPetrov\source\cources\FirstWebApp\obj\Debug\net8.0\FirstWebApp.sourcelink.json
