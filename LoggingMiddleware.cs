@@ -8,9 +8,9 @@
             this._next = next;
         }
 
-        public async Task Invoke(HttpContext context)
+        public async Task InvokeAsync(HttpContext context)
         {
-            Console.WriteLine(context.Request.QueryString);
+            Console.WriteLine($"Metod={context.Request.Method}");
             await _next(context);
         }
     }

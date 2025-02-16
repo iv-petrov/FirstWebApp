@@ -76,7 +76,7 @@
             if (i >= 0) _items.RemoveAt(i);
             return i;
         }
-        public string GetTitle()
+        public string GetId()
         {
             return this.ToDoId;
         }

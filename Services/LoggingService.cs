@@ -6,7 +6,7 @@
         public LoggingService()
         {
             string id = Guid.NewGuid().ToString();
-            _logger = LoggerFactory.Create(builder => builder.AddConsole()).CreateLogger($"ToDo {id}");
+            _logger = LoggerFactory.Create(builder => builder.AddConsole()).CreateLogger($"Logging.Id={id}");
         }
         public void Log(string message)
         {

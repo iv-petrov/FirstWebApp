@@ -9,7 +9,6 @@ namespace FirstWebApp.Controllers
     {
         private readonly IToDoService _service;
         private readonly ILoggingService _logger;
-
         public ToDoController(IToDoService service, ILoggingService logger)
         {
             _logger = logger;
@@ -18,31 +17,31 @@ namespace FirstWebApp.Controllers
         [HttpGet(Name = "GetList")]
         public IEnumerable<ToDoItem> GetList()
         {
-            _logger.Log($"Запрос списка задач. ({_service.GetTitle()})");
+            _logger.Log($"Запрос списка задач. (todoId={_service.GetId()})");
             return _service.GetList();
         }
         [HttpGet("{id}",Name = "GetItem")]
         public ToDoItem GetItem(int id)
         {
-            _logger.Log($"Запрос задачи ид={id}");
+            _logger.Log($"Запрос задачи ид={id}. (todoId={_service.GetId()})");
             return _service.GetItem(id);
         }
         [HttpPost(Name = "PostItem")]
         public int ToDoItem(ToDoItem item)
         {
-            _logger.Log($"Добавление задачи ид={item.Id}, name={item.TaskName}, isdone={item.IsDone.ToString()}");
+            _logger.Log($"Добавление задачи ид={item.Id}, name={item.TaskName}, isdone={item.IsDone.ToString()}. (todoId={_service.GetId()})");
             return _service.AppendItem(item);
         }
         [HttpPut(Name = "PutItem")]
         public ToDoItem PutItem(ToDoItem item)
         {
-            _logger.Log($"Обновление задачи ид={item.Id}");
+            _logger.Log($"Обновление задачи ид={item.Id}. (todoId={_service.GetId()})");
             return _service.SetItem(item);
         }
         [HttpDelete("{id}",Name = "DeleteItem")]
         public int DeleteItem(int id)
         {
-            _logger.Log($"Удаление задачи ид={id}");
+            _logger.Log($"Удаление задачи ид={id}. (todoId={_service.GetId()})");
             return _service.DeleteItem(id);
         }
     }
